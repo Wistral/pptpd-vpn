@@ -8,6 +8,6 @@ sudo cp chap-secrets /etc/ppp/chap-secrets
 sudo cp sysctl.conf /etc/sysctl.conf
 #sudo sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 sudo sysctl -p
-sudo ./rc.pptpd 
+sudo ./pptpd.rc
 
 
