@@ -1,5 +1,6 @@
 #enp3s0是连接外网的网卡名称,用ifconfig查看
-netcard=`ifconfig | grep RUNNING -m 1 | cut -d : -f 1`
+#netcard=`ifconfig | grep RUNNING -m 1 | cut -d : -f 1`
+#netcard="enp3s0"
 sudo iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -o ${netcard} -j MASQUERADE
 sudo iptables -I FORWARD -s 192.168.0.0/24 -p tcp --syn -i ppp+ -j TCPMSS --set-mss 1300
 sudo service pptpd restart
