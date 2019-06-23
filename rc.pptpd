@@ -1,4 +1,4 @@
 iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -o enp4s0 -j MASQUERADE
-iptables -I FORWARD -s 192.168.0.0/24 -p tcp --syn -i ppp+ -j TCPMSS --set-mss 1300
+iptables -I FORWARD -s 192.168.0.0/24 -p tcp --syn -i ppp+ -j TCPMSS --set-mss 1350
 service pptpd restart
 exit 0
